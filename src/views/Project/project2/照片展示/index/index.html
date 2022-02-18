@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+            background: #7b7b7b;
+        }
+        
+        .container {
+            margin: 20px auto;
+            width: 500px;
+        }
+        
+        .btn {
+            background-color: #0fc;
+            width: 100px;
+            padding: 5px 5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px #eee;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container clearfix">
+
+    </div>
+    <div class="btn">
+        点击查看效果
+    </div>
+    <script>
+        function getRand() {
+
+
+            return Math.floor(Math.random() * 10);
+
+        }
+        for (var i = 0; i < 50; i++) {
+            var img = document.createElement("img");
+            img.src = `pic/${getRand()}.jpg`;
+            document.querySelector(".container").appendChild(img);
+            img.style.opacity = .5
+        }
+    </script>
+</body>
+
+</html>
